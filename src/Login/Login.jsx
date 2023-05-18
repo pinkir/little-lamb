@@ -1,15 +1,16 @@
-import login from '../assets/login.jpg'
+import login from '../assets/login2.jpg'
 
 const Login = () => {
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero min-h-screen ">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Login now!</h1>
-                    <img className='h-3/4' src={login} alt="" />
+                    
+                    <img className='w-full max-w-sm' src={login} alt="" />
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
+                    <h1 className="text-5xl font-bold text-green-700">Login now!</h1>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -26,7 +27,8 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            
+                            <input type="submit" value="Login" className="btn btn-warning bg-green-700" />
                         </div>
                     </div>
                 </div>
