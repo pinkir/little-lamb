@@ -6,10 +6,10 @@ import { AuthContext } from '../Provider/AuthProvider';
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
 
-    const handleLogOut =() =>{
+    const handleLogOut = () => {
         logOut()
-        .then(()=>{})
-        .catch(error=>{console.log(error)})
+            .then(() => { })
+            .catch(error => { console.log(error) })
 
     }
     return (
@@ -22,8 +22,13 @@ const Header = () => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/alltoys'>All Toys</Link></li>
-                        <li><Link to='/mytoys'>My Toys</Link></li>
-                        <li><Link to='/addatoy'>Add A Toy</Link></li>
+                        {user?.email ?
+                            <>
+                                <li><Link to='/mytoys'>My Toys</Link></li>
+                                <li><Link to='/addatoy'>Add A Toy</Link></li>
+                            </>
+                            :
+                            ""}
                         <li><Link to='/blogs'>Blogs</Link></li>
                     </ul>
                 </div>
@@ -33,8 +38,14 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1">
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/alltoys'>All Toys</Link></li>
-                    <li><Link to='/mytoys'>My Toys</Link></li>
-                    <li><Link to='/addatoy'>Add A Toy</Link></li>
+                    {user?.email ?
+                        <>
+                            <li><Link to='/mytoys'>My Toys</Link></li>
+                            <li><Link to='/addatoy'>Add A Toy</Link></li>
+                        </>
+                        :
+                        ""}
+
                     <li><Link to='/blogs'>Blogs</Link></li>
 
                 </ul>
@@ -42,11 +53,15 @@ const Header = () => {
             <div className="navbar-end">
                 {
                     user ?
-                        <div onClick={handleLogOut} className="avatar online">
-                            <div className="w-11 rounded-full">
-                                <img src={user.photoURL} title={user.displayName} />
+                        <>
+                            <div className="avatar online">
+                                <div className="w-11 rounded-full">
+                                    <img src={user.photoURL} title={user.displayName} />
+                                </div>
+
                             </div>
-                        </div>
+                            <button onClick={handleLogOut} className="btn  bg-green-700 ml-2">Log Out</button>
+                        </>
                         :
                         <Link to='/login' className="btn  bg-green-700">Login</Link>
                 }

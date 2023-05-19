@@ -9,7 +9,7 @@ import gellary12 from '../../assets/galarry12.jpg'
 import gellary13 from '../../assets/banner7.jpg'
 
 import gellary15 from '../../assets/banner6.jpg'
-import glitter from '../../assets/glitter.jpg'
+
 
 
 const Gallary = () => {

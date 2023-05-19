@@ -1,13 +1,14 @@
 import Banner from "./Banner";
 import Gallary from "./Gallary";
+import ToyTabs from "./ToyTabs";
 
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <ToyTabs></ToyTabs>
             <Gallary></Gallary>
-            <h3>this is home</h3>
         </div>
     );
 };

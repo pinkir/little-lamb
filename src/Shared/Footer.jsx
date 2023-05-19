@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer className="footer p-10 bg-yellow-300 bg-opacity-80 text-base-content">
-            <div>
+            <div data-aos="flip-left">
                 <img className='h-3/4 w-56' src={logo} alt="" />
                 <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
             </div>
