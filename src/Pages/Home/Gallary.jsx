@@ -16,28 +16,32 @@ const Gallary = () => {
     return (
         <div>
             <h3 className='text-center text-5xl p-5 mt-20'>Photo Gallery</h3>
-            <div className='grid grid-cols-3 gap-2 bg-slate-100 p-5' style={{backgroundImage: `url(${glitter})`}}>
-                <div className='col-span-2 '> <img src={gellary15} alt="" /> </div>
-                <div className=''>
+            <div className='grid grid-cols-3 gap-2 bg-slate-100 p-5' >
+                <div className='col-span-2 ' data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"> <img src={gellary15} alt="" /> </div>
+                <div className='' data-aos="fade-down">
                     <img src={gellary2} alt="" />
                 </div>
-                <div className=''>
+                <div data-aos="fade-up">
                     <img src={gellary10} alt="" />
                 </div>
-                <div className='col-span-2  '>
+                <div className='col-span-2' data-aos="fade-left">
                     <img src={gellary12} alt="" />
                 </div>
-                <div className=''>
+                <div data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine">
                     <img src={gellary11} alt="" />
                 </div>
-                <div className=''>
+                <div data-aos="fade-up">
                     <img src={gellary6} alt="" />
                 </div>
-                <div className=''>
+                <div data-aos="fade-left">
                     <img src={gellary13} alt="" />
                 </div>
-                
-                
+
+
             </div>
         </div>
     );
