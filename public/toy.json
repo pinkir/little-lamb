@@ -1,0 +1,85 @@
+[
+    {
+      "toy_name": "Lambchop",
+      "picture": "https://i.ibb.co/Tv47S5b/banner4.jpg",
+      "price": 29,
+      "rating": 4.5,
+      "quantity": 36,
+      "seller_name": "Bette Lowe",
+      "category": "Animal toys",
+      "sub_category": "lamb",
+      "email": "bettelowe@suretech.com",
+      "description": "Introducing our adorable lamb plush toy, the perfect cuddly companion for children of all ages. This soft and fluffy lamb is crafted with the utmost care and attention to detail, making it irresistibly huggable. Its plush white fur is incredibly soft to the touch, providing a comforting and gentle feel."
+    },
+    {
+      "toy_name": "Marshmallow",
+      "picture": "https://i.ibb.co/N2kJnY1/71-Yhvil0-Sv-L-SL1500.jpg",
+      "price": 20,
+      "rating": 4.2,
+      "quantity": 33,
+      "seller_name": "Petty Deleon",
+      "category": "Animal toys",
+      "sub_category": "lamb",
+      "email": "pettydeleon@suretech.com",
+      "description": "Made from high-quality materials, this lamb toy is not only delightful to hold and play with, but also durable and long-lasting. Its size is just right for little hands to grasp, fostering fine motor skills and sensory development."
+    },
+    {
+      "toy_name": "Patches",
+      "picture": "https://i.ibb.co/wwpbdyj/istockphoto-538827837-612x612.jpg",
+      "price": 29,
+      "rating": 4,
+      "quantity": 37,
+      "seller_name": "Wendy Lopez",
+      "category": "Animal toys",
+      "sub_category": "lamb",
+      "email": "wendylopez@suretech.com",
+      "description": "Whether it's a gift for a newborn, a birthday surprise, or a comforting companion during bedtime, our lamb toy is guaranteed to bring joy and warmth. It's also an excellent educational tool to introduce children to farm animals and encourage imaginative play."
+    },
+    {
+      "toy_name": "Buttercup",
+      "picture": "https://i.ibb.co/HPM66wz/toy-stuffed-cow-puppet-isolated-white-background-symbol-chinese-new-year-cuddly-animal-211430069.jpg",
+      "price": 28,
+      "rating": 4.5,
+      "quantity": 40,
+      "seller_name": "Duke Cox",
+      "category": "Animal toys",
+      "sub_category": "cow",
+      "email": "dukecox@suretech.com",
+      "description": "Crafted from high-quality materials, our cow toy is not only exceptionally soft but also durable, ensuring it can withstand countless hours of play and companionship. It's a delightful way to introduce children to farm animals and foster their love for nature and imaginative storytelling."
+    },
+    {
+      "toy_name": "Cuddles",
+      "picture": "https://i.ibb.co/42TbSgd/71b-9c-SKTML-AC-UL600-SR600-600.jpg",
+      "price": 25,
+      "rating": 5,
+      "quantity": 33,
+      "seller_name": "Angelita Townsend",
+      "category": "Animal toys",
+      "sub_category": "cow",
+      "email": "angelitatownsend@suretech.com",
+      "description": "This cow plush toy is a versatile playmate, providing comfort, companionship, and endless opportunities for creative play. Whether it's joining a tea party, going on a pretend farm adventure, or simply being a comforting presence during naptime, this cow toy is the perfect choice."
+    },
+    {
+      "toy_name": "Molly",
+      "picture": "https://i.ibb.co/x3kHMyp/front-view-cute-little-baby-boy-cupcake-teddybear.jpg",
+      "price": 32,
+      "rating": 4.3,
+      "quantity": 28,
+      "seller_name": "Hansen Snider",
+      "category": "Animal toys",
+      "sub_category": "teddy",
+      "email": "hansensnider@suretech.com",
+      "description": "The teddy bear's timeless appeal makes it a wonderful gift for birthdays, holidays, or any occasion that calls for a touch of tenderness. Its presence is a reminder of cherished memories, fostering feelings of love and companionship."
+    },
+    {
+      "toy_name": "Honey",
+      "picture": "https://i.ibb.co/D11J8VR/fluffy-toy-texture-close-up.jpg",
+      "price": 76,
+      "rating": 5,
+      "quantity": 40,
+      "seller_name": "Bernadette Larsen",
+      "category": "Animal toys",
+      "sub_category": "teddy",
+      "email": "Bring a sense of joy and comfort into your life with our endearing teddy bear plush toy. Embrace its warmth and let it become a cherished friend, providing comfort, companionship, and a lifetime of cuddles."
+    }
+  ]

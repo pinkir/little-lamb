@@ -14,7 +14,7 @@ import gellary15 from '../../assets/banner6.jpg'
 
 const Gallary = () => {
     return (
-        <div>
+        <div className='max-w-6xl mx-auto'>
             <h3 className='text-center text-5xl p-5 mt-20'>Photo Gallery</h3>
             <div className='grid grid-cols-3 gap-2 bg-slate-100 p-5' >
                 <div className='col-span-2 ' data-aos="fade-right"
