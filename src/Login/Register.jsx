@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import login from '../assets/login2.jpg'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 
 const Register = () => {
     const {createUser} = useContext(AuthContext);
+    const [error, setError] = useState('');
 
 
     const handleSignUp =(event) =>{
@@ -20,7 +22,33 @@ const Register = () => {
 
 
         createUser(email, password)
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+            event.target.reset();
+            updateUserData(result.user, name, photo);
+        })
+        .catch(error => console.log(error))
         
+
+
+        setError('');
+        if(password.length < 6){
+            setError('add minimum 6 characters');
+            return;
+        }
+
+        const updateUserData = (user, name, photo) =>{
+            updateProfile(user, {
+                displayName: name, photoURL: photo
+            })
+            .then(()=>{
+                console.log('user name and photo updated')
+            })
+            .catch(error =>{
+                setError(error.message);
+            })
+        }
 
     }
     return (
@@ -63,10 +91,13 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Photo</span>
                                 </label>
-                                <input type="text" placeholder="url" className="input input-bordered"
+                                <input type="url" placeholder="url" className="input input-bordered"
                                     name='photo'
                                     required />
                             </div>
+                            <label className="label">
+                                <p className='text-error'>{error}</p>
+                            </label>
                             <label className="label">
                                 <p>Already have an account??  Please <Link to='/login' className='text-primary'> Login...</Link></p>
                             </label>

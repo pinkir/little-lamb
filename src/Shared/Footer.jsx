@@ -1,4 +1,5 @@
 import logo from '../assets/littlelamb.jpg'
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -8,11 +9,11 @@ const Footer = () => {
                 <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
             </div>
             <div>
-                <span className="footer-title">Services</span>
-                <a className="link link-hover">Branding</a>
-                <a className="link link-hover">Design</a>
-                <a className="link link-hover">Marketing</a>
-                <a className="link link-hover">Advertisement</a>
+                <span className="footer-title">Follow Us</span>
+                <a className="text-2xl"><FaFacebook></FaFacebook></a>
+                <a className="text-2xl"><FaTwitter></FaTwitter></a>
+                <a className="text-2xl"><FaInstagram></FaInstagram></a>
+                <a className="text-2xl"><FaYoutube></FaYoutube></a>
             </div>
             <div>
                 <span className="footer-title">Company</span>

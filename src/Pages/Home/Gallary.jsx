@@ -9,13 +9,14 @@ import gellary12 from '../../assets/galarry12.jpg'
 import gellary13 from '../../assets/banner7.jpg'
 
 import gellary15 from '../../assets/banner6.jpg'
+import glitter from '../../assets/glitter.jpg'
 
 
 const Gallary = () => {
     return (
         <div>
             <h3 className='text-center text-5xl p-5 mt-20'>Photo Gallery</h3>
-            <div className='grid grid-cols-3 gap-4 bg-slate-100 p-5'>
+            <div className='grid grid-cols-3 gap-2 bg-slate-100 p-5' style={{backgroundImage: `url(${glitter})`}}>
                 <div className='col-span-2 '> <img src={gellary15} alt="" /> </div>
                 <div className=''>
                     <img src={gellary2} alt="" />
