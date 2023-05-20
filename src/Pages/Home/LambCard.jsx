@@ -1,15 +1,16 @@
 
-
-const LambCard = ({toy}) => {
-    const {sub_category, picture, price, rating, toy_name} = toy;
+const LambCard = ({ toy }) => {
+    const { sub_category, picture, price, rating, toy_name } = toy || {};
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
             <figure><img src={picture} alt="Shoes" /></figure>
             <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                <h2 className="card-title">Toy Name: {toy_name}</h2>
+                <p className="card-title">Price: $  {price}</p>
+                <p className="card-title">
+                Rating: {rating}</p>
+                <div className="card-actions">
+                    <button className="btn btn-primary">Details</button>
                 </div>
             </div>
         </div>

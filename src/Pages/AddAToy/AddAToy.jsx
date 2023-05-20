@@ -1,7 +1,12 @@
+
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
+
 
 
 const AddAToy = () => {
+    const {user} = useContext(AuthContext)
     const handleAddAToy = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -57,7 +62,8 @@ const AddAToy = () => {
                             <label className="input-group">
                                 <span>Seller Email</span>
                                 <input type="text" placeholder="info@site.com" className="input input-bordered"
-                                    name="email" />
+                                    name="email"
+                                    defaultValue={user?.email} />
                             </label>
                         </div>
                         <div className="form-control">
