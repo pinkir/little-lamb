@@ -9,7 +9,8 @@ import Blogs from "../Pages/Blogs";
 import AddAToy from "../Pages/AddAToy/AddAToy";
 import AllToys from "../Pages/AllToys/AllToys";
 import PrivateRoute from "./PrivateRoute";
-import SingleToyDetail from "../Pages/AllToys/SingleToyDetail";
+import MyToys from "../Pages/MyToys/MyToys";
+
 
 const router = createBrowserRouter([
     {
@@ -47,10 +48,10 @@ const router = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/tabToys')
             },
             {
-                path: "/singletoydetail/:id",
-                element: <SingleToyDetail></SingleToyDetail>,
-                loader: ({params}) => fetch(`http://localhost:5000/tabToys/${params._id}`)
-            },
+                path: "/mytoys",
+                element: <MyToys></MyToys>
+            }
+            
 
 
         ]

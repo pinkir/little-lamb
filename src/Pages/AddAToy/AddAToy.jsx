@@ -82,7 +82,7 @@ const AddAToy = () => {
                             </label>
                             <label className="input-group">
                                 <span>Toy Name</span>
-                                <input type="text" placeholder="seller name" className="input input-bordered"
+                                <input type="text" placeholder="toy name" className="input input-bordered"
                                     name="toy_name"/>
                             </label>
                         </div>
