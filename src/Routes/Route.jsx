@@ -7,6 +7,8 @@ import Register from "../Login/Register";
 import Error from "../Error/Error";
 import Blogs from "../Pages/Blogs";
 import AddAToy from "../Pages/AddAToy/AddAToy";
+import AllToys from "../Pages/AllToys/AllToys";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -36,8 +38,14 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addatoy",
-                element: <AddAToy></AddAToy>
-            }
+                element: <PrivateRoute><AddAToy></AddAToy></PrivateRoute>
+            },
+            {
+                path: "/alltoys",
+                element: <AllToys></AllToys>,
+                loader: () => fetch('http://localhost:5000/tabToys')
+            },
+
 
         ]
     },
