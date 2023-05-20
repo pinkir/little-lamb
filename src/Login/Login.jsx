@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import login from '../assets/login2.jpg'
 import { FaGoogle } from 'react-icons/fa';
 import { useContext, useState } from 'react';
@@ -7,6 +7,12 @@ import { AuthContext } from '../Provider/AuthProvider';
 const Login = () => {
     const {signIn, googleSignUp} = useContext(AuthContext);
     const [error, setError] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/'
+
+
 
     const handleGoogle = () =>{
         googleSignUp()
@@ -31,6 +37,7 @@ const Login = () => {
         .then(result =>{
             const user = result.user;
             console.log(user);
+            navigate(from, {replace: true})
         })
         .catch(error => setError(error.message))
 

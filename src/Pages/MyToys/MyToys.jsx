@@ -53,6 +53,11 @@ const MyToys = () => {
     }
     const handleUpdate = id =>{
         fetch(`http://localhost:5000/tabToys/${id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify({s})
 
         })
         .then(res => res.json())
