@@ -1,11 +1,16 @@
 import { useContext } from "react";
 import { FaEdit, FaRegTrashAlt } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Link } from "react-router-dom";
 
 
-const MyToy = ({ myToy , handleDelete, handleUpdate}) => {
+const MyToy = ({ myToy , handleDelete}) => {
     const { user } = useContext(AuthContext);
     const { _id,  toy_name,  sub_category, price, quantity, seller_name, description } = myToy;
+
+    
+
+
 
     
     return (
@@ -33,11 +38,11 @@ const MyToy = ({ myToy , handleDelete, handleUpdate}) => {
             <td>{quantity}</td>
 
             <th>
-                <label htmlFor="my-modal-6" ><FaEdit onClick={()=>handleUpdate(_id)} className="mb-3"></FaEdit></label>
+                <Link to={`/updatetoy/${_id}`}><label htmlFor="my-modal-6" ><FaEdit className="mb-3"></FaEdit></label></Link>
 
                 {/* Put this part before </body> tag */}
                 <input type="checkbox" id="my-modal-6" className="modal-toggle" />
-                <div className="modal modal-bottom sm:modal-middle">
+                {/* <div className="modal modal-bottom sm:modal-middle">
                     <div className="modal-box">
                         <form className="pb-16">
                             <div className=" justify-center gap-6 mb-4">
@@ -147,7 +152,7 @@ const MyToy = ({ myToy , handleDelete, handleUpdate}) => {
                             <input className="btn btn-block " type="submit" value="Update Toy" name="add" />
                         </form>
                     </div>
-                </div>
+                </div> */}
 
 
                 {/* <FaEdit className="mb-3"></FaEdit> */}

@@ -11,6 +11,7 @@ import AllToys from "../Pages/AllToys/AllToys";
 import PrivateRoute from "./PrivateRoute";
 import MyToys from "../Pages/MyToys/MyToys";
 import SingleToy from "../Pages/Home/SingleToy";
+import UpdateToy from "../Pages/MyToys/UpdateToy";
 
 
 
@@ -56,9 +57,16 @@ const router = createBrowserRouter([
             },
             {
                 path: "/singletoy/:id",
-                element: <SingleToy></SingleToy>,
+                element: <PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/tabToysDetails/${params.id}`)
             },
+            {
+                path: "/updatetoy/:id",
+                element: <UpdateToy></UpdateToy>,
+                loader: ({params}) => fetch(`http://localhost:5000/update/${params.id}`)
+            },
+
+
             
             
 

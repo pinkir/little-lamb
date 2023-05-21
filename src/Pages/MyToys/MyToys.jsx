@@ -64,20 +64,7 @@ const MyToys = () => {
         })
 
     }
-    const handleUpdate = id => {
-        fetch(`http://localhost:5000/tabToysDetails/${id}`, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify()
-
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-            })
-    }
+    
     return (
         <div className="mb-20">
             <h2 className="text-center text-4xl mt-16 mb-5 text-green-700">My Toys</h2>
@@ -110,7 +97,7 @@ const MyToys = () => {
                                 key={myToy._id}
                                 myToy={myToy}
                                 handleDelete={handleDelete}
-                                handleUpdate={handleUpdate}
+                                
                             ></MyToy>)
 
                         }

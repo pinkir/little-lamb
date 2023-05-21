@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
+
 
 const AllToyTable = ({ toy }) => {
     
-    const { seller_name, toy_name, email, sub_category, picture, description, price, quantity, rating } = toy;
+    const { _id, seller_name, toy_name, email, sub_category, picture, description, price, quantity, rating } = toy;
     return (
         <tr>
             
