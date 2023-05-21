@@ -16,6 +16,19 @@ const MyToys = () => {
             })
     }, [user])
 
+
+    const [search, setSearch] = useState("")
+
+
+    const handleSearch =() =>{
+        fetch(`http://localhost:5000/toySearch/${search}`)
+        .then(res => res.json())
+        .then(data => {
+            setMyToys(data)
+        })
+    }
+
+
     const handleDelete = _id => {
         console.log(_id);
         Swal.fire({
@@ -29,45 +42,54 @@ const MyToys = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/tabToys/${_id}` ,{
+                fetch(`http://localhost:5000/tabToys/${_id}`, {
                     method: "DELETE",
                 })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    if(data.deletedCount > 0){
-                        Swal.fire(
-                            'Deleted!',
-                            'Your file has been deleted.',
-                            'success'
-                        )
-                        const remaining = myToys.filter(toy=> toy._id !== _id)
-                        setMyToys(remaining)
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            )
+                            const remaining = myToys.filter(toy => toy._id !== _id)
+                            setMyToys(remaining)
 
-                    }
-                })
-                
+                        }
+                    })
+
             }
         })
 
     }
-    const handleUpdate = id =>{
-        fetch(`http://localhost:5000/tabToys/${id}`, {
+    const handleUpdate = id => {
+        fetch(`http://localhost:5000/tabToysDetails/${id}`, {
             method: 'PUT',
             headers: {
-                'content-type' : 'application/json'
+                'content-type': 'application/json'
             },
-            body: JSON.stringify({s})
+            body: JSON.stringify()
 
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
     }
     return (
         <div className="mb-20">
-            <h2 className="text-center text-4xl mt-16 mb-5 text-green-700">All Toys</h2>
+            <h2 className="text-center text-4xl mt-16 mb-5 text-green-700">My Toys</h2>
+            <div>
+                <div className="form-control">
+                    <div className="search justify-center text-center bg-green-700 p-3">
+                        <input onChange={(e) => setSearch(e.target.value)}
+                            type="text"  id="" />
+                        <button onClick={handleSearch} className="btn">Search</button>
+                    </div>
+                </div>
+            </div>
             <div className="overflow-x-auto w-full max-w-6xl mx-auto">
                 <table className="table w-full">
                     <thead>

@@ -10,7 +10,7 @@ const LambCard = ({ toy }) => {
                 <p className="card-title">Price: $ {price}</p>
                 <p className="card-title">Rating: $ {rating}</p>
                 <div className="card-actions">
-                    <Link to ={`/tabToys/${_id}`}>
+                    <Link to ={`/singletoy/${_id}`}>
                     <button className="btn btn-primary">Details</button>
                     </Link>
                 </div>

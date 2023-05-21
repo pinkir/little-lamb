@@ -144,7 +144,7 @@ const MyToy = ({ myToy , handleDelete, handleUpdate}) => {
                                 </div>
 
                             </div>
-                            <input className="btn btn-block " type="submit" value="Add Toy" name="add" />
+                            <input className="btn btn-block " type="submit" value="Update Toy" name="add" />
                         </form>
                     </div>
                 </div>

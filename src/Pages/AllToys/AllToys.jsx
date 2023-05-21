@@ -1,15 +1,18 @@
 import { useLoaderData } from "react-router-dom";
 import AllToyTable from "./AllToyTable";
+import { useEffect, useState } from "react";
 
 
 const AllToys = () => {
 
     const toys = useLoaderData()
+    
 
 
     return (
         <div>
             <h2 className="text-center text-4xl mt-16 mb-5 text-green-700">All Toys</h2>
+            
             <div className="overflow-x-auto w-full max-w-6xl mx-auto">
                 <table className="table w-full">
                     <thead>
