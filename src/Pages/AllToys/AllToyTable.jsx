@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const AllToyTable = ({ toy }) => {
@@ -28,7 +29,9 @@ const AllToyTable = ({ toy }) => {
             <td>{quantity}</td>
             
             <th>
+                <Link to={`/singletoy/${_id}`}>
                 <button className="btn btn-ghost btn-xs"> View details</button>
+                </Link>
             </th>
         </tr>
     );
