@@ -1,3 +1,4 @@
+import useTitle from "../../hooks/useTitle";
 import AboutUs from "./AboutUs";
 import Banner from "./Banner";
 import CountDown from "./CountDown";
@@ -6,6 +7,7 @@ import ToyTabs from "./ToyTabs";
 
 
 const Home = () => {
+    useTitle('Home')
     return (
         <div>
             <Banner></Banner>

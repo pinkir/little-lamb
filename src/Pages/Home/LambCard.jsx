@@ -7,7 +7,7 @@ const LambCard = ({ toy }) => {
 
     const toastBtn = () =>{
         Swal.fire({
-            title: 'success!',
+            title: 'hey!',
             text: 'You have to login first to view details',
             icon: 'success',
             confirmButtonText: 'Cool'

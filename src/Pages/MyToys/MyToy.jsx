@@ -2,10 +2,12 @@ import { useContext } from "react";
 import { FaEdit, FaRegTrashAlt } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 
 const MyToy = ({ myToy , handleDelete}) => {
     const { user } = useContext(AuthContext);
+    
     const { _id,  toy_name,  sub_category, price, quantity, seller_name, description } = myToy;
 
     
