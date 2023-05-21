@@ -10,7 +10,7 @@ const ToyTabs = () => {
     const [activeTab, setActiveTab] = useState("lamb");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/tabToys/${activeTab}`)
+        fetch(`https://little-lamb-server.vercel.app/tabToys/${activeTab}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [activeTab])

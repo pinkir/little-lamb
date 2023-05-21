@@ -27,7 +27,7 @@ const UpdateToy = () => {
         const updateToy = { seller_name, toy_name, email, sub_category, picture, description, price, quantity, rating };
         console.log(updateToy);
 
-        fetch(`http://localhost:5000/update/${_id}`, {
+        fetch(`https://little-lamb-server.vercel.app/update/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -30,7 +30,7 @@ const AddAToy = () => {
 
 
         // add a toy
-        fetch('http://localhost:5000/tabToys', {
+        fetch('https://little-lamb-server.vercel.app/tabToys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

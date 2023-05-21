@@ -49,7 +49,7 @@ const router = createBrowserRouter([
             {
                 path: "/alltoys",
                 element: <AllToys></AllToys>,
-                loader: () => fetch('http://localhost:5000/tabToys')
+                loader: () => fetch('https://little-lamb-server.vercel.app/tabToys')
             },
             {
                 path: "/mytoys",
@@ -58,12 +58,12 @@ const router = createBrowserRouter([
             {
                 path: "/singletoy/:id",
                 element: <PrivateRoute><SingleToy></SingleToy></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/tabToysDetails/${params.id}`)
+                loader: ({params}) => fetch(`https://little-lamb-server.vercel.app/tabToysDetails/${params.id}`)
             },
             {
                 path: "/updatetoy/:id",
                 element: <UpdateToy></UpdateToy>,
-                loader: ({params}) => fetch(`http://localhost:5000/update/${params.id}`)
+                loader: ({params}) => fetch(`https://little-lamb-server.vercel.app/update/${params.id}`)
             },
 
 

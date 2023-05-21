@@ -11,7 +11,7 @@ const MyToys = () => {
     useTitle('My Toys')
 
     useEffect(() => {
-        fetch(`http://localhost:5000/mytoys/${user?.email}`)
+        fetch(`https://little-lamb-server.vercel.app/mytoys/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setMyToys(data)
@@ -23,7 +23,7 @@ const MyToys = () => {
 
 
     const handleSearch =() =>{
-        fetch(`http://localhost:5000/toySearch/${search}`)
+        fetch(`https://little-lamb-server.vercel.app/toySearch/${search}`)
         .then(res => res.json())
         .then(data => {
             setMyToys(data)
@@ -44,7 +44,7 @@ const MyToys = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/tabToys/${_id}`, {
+                fetch(`https://little-lamb-server.vercel.app/tabToys/${_id}`, {
                     method: "DELETE",
                 })
                     .then(res => res.json())
