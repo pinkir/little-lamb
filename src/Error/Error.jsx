@@ -6,7 +6,7 @@ const Error = () => {
         <div >
             
             <img className='w-2/5 mx-auto  relative' src={error} alt="" />
-            <Link to='/' className="btn bg-green-600 mb-20 relative -top-44 left-1/2">Back To Home</Link>
+            <Link to='/' className="btn bg-green-600 mb-20 relative -top-44 left-1/2">Back To Home.</Link>
            
             
         </div>
