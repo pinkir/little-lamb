@@ -21,7 +21,7 @@ const AddAToy = () => {
         const sub_category = form.sub_category.value;
         const picture = form.picture.value;
         const description = form.description.value;
-        const price = form.price.value;
+        const price = parseInt(form.price.value);
         const quantity = form.quantity.value;
         const rating = form.rating.value;
 

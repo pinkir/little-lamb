@@ -70,6 +70,7 @@ const MyToys = () => {
     return (
         <div className="mb-20">
             <h2 className="text-center text-4xl mt-16 mb-5 text-green-700">My Toys</h2>
+
             <div>
                 <div className="form-control">
                     <div className="search justify-center text-center bg-green-700 p-3">

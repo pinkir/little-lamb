@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import AllToyTable from "./AllToyTable";
-import { useEffect, useState } from "react";
+
 import useTitle from "../../hooks/useTitle";
 
 

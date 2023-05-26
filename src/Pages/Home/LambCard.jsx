@@ -1,3 +1,4 @@
+import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -5,7 +6,7 @@ const LambCard = ({ toy }) => {
     const { _id, picture, price, rating, toy_name } = toy || {};
 
 
-    const toastBtn = () =>{
+    const toastBtn = () => {
         Swal.fire({
             title: 'hey!',
             text: 'You have to login first to view details',
@@ -19,10 +20,17 @@ const LambCard = ({ toy }) => {
             <div className="card-body">
                 <h2 className="card-title">Toy Name: {toy_name}</h2>
                 <p className="card-title">Price: $ {price}</p>
-                <p className="card-title">Rating: $ {rating}</p>
+                {/* <Rating
+                    style={{ maxWidth: 50 }}
+                    value={rating}
+                    readOnly
+                /> */}
+                <p className="card-title">Rating:
+
+                    {rating}</p>
                 <div className="card-actions">
-                    <Link onClick={toastBtn} to ={`/singletoy/${_id}`}>
-                    <button className="btn btn-primary">Details</button>
+                    <Link onClick={toastBtn} to={`/singletoy/${_id}`}>
+                        <button className="btn btn-primary">Details</button>
                     </Link>
                 </div>
             </div>

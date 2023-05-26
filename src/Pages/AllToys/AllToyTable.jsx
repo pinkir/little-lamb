@@ -11,7 +11,7 @@ const AllToyTable = ({ toy }) => {
                 <div className="flex items-center space-x-3">
                     
                     <div>
-                        <div className="font-bold">{toy?.seller_name}</div>
+                        <div className="font-bold"><li>{toy?.seller_name}</li></div>
                         
                     </div>
                 </div>

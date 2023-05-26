@@ -3,7 +3,7 @@ import banner from '../../assets/banner2.jpg'
 
 const Banner = () => {
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: `url(${banner})` }}>
+        <div className="hero min-h-screen " style={{ backgroundImage: `url(${banner})` }}>
 
             <div className="hero-content text-center text-neutral-content hero-overlay bg-opacity-60">
                 <div className="max-w-md " data-aos="fade-up"
