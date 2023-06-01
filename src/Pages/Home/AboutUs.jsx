@@ -2,7 +2,7 @@ import about from '../../assets/about.jpg'
 
 const AboutUs = () => {
     return (
-        <div className="hero min-h-screen mt-44 overflow-y: hidden; overflow-x: hidden">
+        <div className="hero min-h-screen mt-44">
             <div className="hero-content flex-col lg:flex-row">
                 <img data-aos="fade-right" src={about} className="w-72 rounded-lg " />
                 <div data-aos="fade-left">
