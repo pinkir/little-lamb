@@ -40,7 +40,6 @@ const Blogs = () => {
             <p>
             An aggregation pipeline consists of one or more stages that process documents: Each stage performs an operation on the input documents.
             </p>
-            <p>hello</p>
         </div>
     );
 };
