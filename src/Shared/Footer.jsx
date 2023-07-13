@@ -1,9 +1,19 @@
 import logo from '../assets/littlelamb.jpg'
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import {  FaArrowRight, FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-yellow-300 bg-opacity-80 text-base-content">
+        <div>
+            <div className='mt-40 p-5 bg-green-600 flex justify-around items-center'>
+                <h3 className='text-3xl text-slate-50'>Let's Stay Connected<FaArrowRight></FaArrowRight></h3>
+                <div>
+                <input type="email" placeholder="Email" className="input input-bordered w-full max-w-xs" />
+                <button className="btn mt-2">Subscribe</button>
+                </div>
+
+
+            </div>
+            <footer className="footer p-10 bg-yellow-300 bg-opacity-80 text-base-content">
             <div data-aos="flip-left">
                 <img className='h-3/4 w-56' src={logo} alt="" />
                 <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
@@ -29,6 +39,7 @@ const Footer = () => {
                 <a className="link link-hover">Cookie policy</a>
             </div>
         </footer>
+        </div>
     );
 };
 

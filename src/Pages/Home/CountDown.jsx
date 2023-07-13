@@ -3,7 +3,8 @@
 const CountDown = () => {
     return (
         <div>
-            <h3 className=' text-4xl mb-3 text-center mt-60'>OverView</h3>
+            <h3 className=' text-4xl mb-3 text-center mt-60 text-green-700'>OverView</h3>
+            <p className="text-center mb-3 text-slate-500">We're thrilled to share an update on our toy store's performance for the past month. <br /> It was an exciting period filled with vibrant sales and enthusiastic website views, <br /> reflecting our commitment to providing a delightful toy shopping experience.</p>
             <div className="stats shadow text-center flex">
 
                 <div className="stat">

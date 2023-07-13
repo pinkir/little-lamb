@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+
 import 'react-tabs/style/react-tabs.css';
 import LambCard from './LambCard';
 import { Tab, TabList, Tabs } from 'react-tabs';
@@ -23,7 +24,7 @@ const ToyTabs = () => {
     };
 
     return (
-        <div className='text-center mt-36'>
+        <div className='text-center mt-36 bg'>
             <h3 className='text-green-700 text-4xl mb-3'>Shop by Category</h3>
             <p className='text-slate-500 mb-3'>Here are some sub category toys. You can explore the sub categories and buy the one you like ...</p>
 
